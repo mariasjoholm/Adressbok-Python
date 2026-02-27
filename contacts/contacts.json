@@ -1,9 +1,10 @@
 [
   {
     "firstName": "Anna",
+    "firstName": "Anna-Klara",
     "lastName": "Jonsson",
     "telephone": "0701234567",
-    "adress": " Berlin Berlinvägen 12B",
+    "adress": "Berlin Berlinvägen 12B",
     "email": "anna.jonsson@example.com",
     "birthday": "1995-04-12",
     "info": "Vän"
@@ -13,7 +14,7 @@
     "lastName": "Berrysson",
     "telephone": "0702345678",
     "adress": "Uppsala Uppsalagatan 15",
-    "email": "maria.sjoholm@example.com",
+    "email": "mary.Berry@example.com",
     "birthday": "1992-08-03",
     "info": "Jobbkontakt"
   },
@@ -22,7 +23,7 @@
     "lastName": "Jönsson",
     "telephone": "0703456789",
     "adress": "Västerås Västeråsgatan 18",
-    "email": "maria.vestman@example.com",
+    "email": "mary.jonsson@example.com",
     "birthday": "1998-01-20",
     "info": "Studiekamrat"
   },
