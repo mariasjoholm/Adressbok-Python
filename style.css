@@ -1,0 +1,34 @@
+/*Knappar förutom save*/
+    div.stButton > button {
+        background-color: #ff8d23;
+        color: white;
+    }
+
+    div.stButton > button:hover {
+        background-color: #a86627;
+        color: white;
+}
+
+
+/*Flikar*/
+    /*Textfärg på alla flikar */
+    button[data-baseweb="tab"] {
+    color: #333 !important;
+    }
+
+    /*Hover-färg */
+    button[data-baseweb="tab"]:hover {
+    color: #ff8d23 !important;   /* byt till din färg */
+    }
+
+    /* Aktiv flik text*/
+    button[data-baseweb="tab"][aria-selected="true"] {
+    color: #ff8d23 !important;   /* byt till din färg */
+    }
+
+    /* Den lilla linjen/underlinen under aktiv flik */
+    div[data-baseweb="tab-highlight"] {
+    background-color: #ff8d23 !important;  /* byt till din färg */
+    }
+
+
