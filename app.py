@@ -12,7 +12,7 @@ Skriv detta i powershell i mappen:
 Skriv sedan detta i powershell i mappen: 
 python -m streamlit run app.py
 """
-from test_contacts import test_contacts # Importera testkontakter 
+from contacts.test_contacts import test_contacts # Importera testkontakter 
 import streamlit as st                  # Används för 
 from util.util_fuzz import best_match   # Importera fuzzy funktion från util_fuzzy, bästa strängträff
 from validation import validate_contact # Importera valideringsfunktionen
@@ -20,7 +20,7 @@ from storage_json import load_contacts_json, save_contacts_json
 from datetime import date 
 
 #filen för sparade kontakter 
-contacts_file = 'contacts.json'
+contacts_file = 'contacts/contacts.json'
 
 #importera style.css 
 def style(path):
