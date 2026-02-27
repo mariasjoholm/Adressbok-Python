@@ -16,6 +16,7 @@ from util.util_fuzz import best_match   # Importera fuzzy funktion från util_fu
 from validation import validate_contact # Importera valideringsfunktionen
 from storage_json import load_contacts_json, save_contacts_json
 from datetime import date 
+st.set_page_config(layout="centered")
 
 #filen för sparade kontakter 
 contacts_file = 'contacts/contacts.json'
@@ -62,11 +63,11 @@ def edit_contact(index):
     default_birthday = person["birthday"] if person["birthday"] is not None else date.today()
 
     with st.form(f"editContact_form_{index}", clear_on_submit=False):
-        editFirstname = st.text_input("Förnamn *", value=person["firstName"]).strip()
-        editLastname = st.text_input("Efternamn", value=person["lastName"]).strip()
-        editTelephone = st.text_input("Telephone number", value=person["telephone"]).strip()
-        editAdress = st.text_input("Adress", value=person["adress"]).strip()
-        editEmail = st.text_input("Email address", value=person["email"]).strip()
+        editFirstname = st.text_input("First name *", value=person["firstName"]).strip()
+        editLastname = st.text_input("Last name", value=person["lastName"]).strip()
+        editTelephone = st.text_input("Telephone", value=person["telephone"]).strip()
+        editAddress = st.text_input("Address", value=person["address"]).strip()
+        editEmail = st.text_input("Email", value=person["email"]).strip()
 
         editBirthday = st.date_input("Add birthday", value=default_birthday)
         noBirthday = st.checkbox(
@@ -77,7 +78,7 @@ def edit_contact(index):
         if noBirthday:
             editBirthday = None
 
-        editInfo = st.text_input("Information", value=person["info"]).strip()
+        editInfo = st.text_input("Information", value=person["information"]).strip()
 
         colA, colB = st.columns(2)
         with colA:
@@ -95,10 +96,10 @@ def edit_contact(index):
                 "firstName": editFirstname,
                 "lastName": editLastname,
                 "telephone": editTelephone,
-                "adress": editAdress,
+                "address": editAddress,
                 "email": editEmail,
                 "birthday": editBirthday,
-                "info": editInfo,
+                "information": editInfo,
             }
             #spara 
             save_contacts_json(contacts_file, st.session_state.contacts)
@@ -117,11 +118,11 @@ with tab_showAll:
 
             with column1:
                 st.write(f"### {person['firstName']} {person['lastName']}")
-                st.write(f"**Telefon:** {person['telephone']}")
-                st.write(f"**Adress:** {person['adress']}")
-                st.write(f"**E-post:** {person['email']}")
-                st.write(f"**Födelsedag:** {person['birthday']}")
-                st.write(f"**Information:** {person['info']}")
+                st.write(f"**Telephone:** {person['telephone']}")
+                st.write(f"**Address:** {person['address']}")
+                st.write(f"**Email:** {person['email']}")
+                st.write(f"**Birthday:** {person['birthday']}")
+                st.write(f"**Information:** {person['information']}")
             if st.session_state.edit_index == index:
                 edit_contact(index)
 
@@ -144,12 +145,12 @@ with tab_addContact:
         st.session_state.saved_msg = ""
 
     with st.form('addContact_form',clear_on_submit=True):
-        firstName = st.text_input('Förnamn *').strip()
-        lastName = st.text_input('Efternamn').strip()
-        telephone = st.text_input('Telephone number').strip()
-        adress = st.text_input('Adress').strip()
+        firstName = st.text_input('First name *').strip()
+        lastName = st.text_input('Last name').strip()
+        telephone = st.text_input('Telephone').strip()
+        address = st.text_input('Address').strip()
         email = st.text_input('Email address').strip()
-        birthday = st.date_input('Add birthday', value= None)
+        birthday = st.date_input('Birthday', value= None)
         noBirthday = st.checkbox('No birthday and any selected date will be removed')
         if noBirthday: 
             birthday = None
@@ -161,14 +162,14 @@ with tab_addContact:
                 'firstName': firstName, 
                 'lastName': lastName, 
                 'telephone': telephone,
-                "adress": adress,
+                "address": address,
                 "email": email,
                 "birthday": birthday,
-                "info": info})
+                "information": info})
             #spara 
             save_contacts_json(contacts_file, st.session_state.contacts) 
             # Sparar bekräftelsemeddelande och startar om appen
-            st.session_state.saved_msg = "Kontakt sparad"
+            st.session_state.saved_msg = "Contact saved"
             st.rerun()
 
 #Sök efter en kontakt 
@@ -190,12 +191,12 @@ with tab_searchContact:
                 person = contacts[index]
                 st.success(f"Contact found!")
 
-                st.write(f"**Förnamn:** {person['firstName']}")
-                st.write(f"**Efternamn:** {person['lastName']}")
-                st.write(f"**Telefon:** {person['telephone']}")
-                st.write(f"**Adress:** {person['adress']}")
-                st.write(f"**E-post:** {person['email']}")
-                st.write(f"**Födelsedag:** {person['birthday']}")
-                st.write(f"**Info:** {person['info']}")
+                st.write(f"**First name:** {person['firstName']}")
+                st.write(f"**Last name:** {person['lastName']}")
+                st.write(f"**Telephone:** {person['telephone']}")
+                st.write(f"**Address:** {person['address']}")
+                st.write(f"**Email:** {person['email']}")
+                st.write(f"**Birthday:** {person['birthday']}")
+                st.write(f"**Information:** {person['information']}")
             else: 
                 st.error('No contact found')

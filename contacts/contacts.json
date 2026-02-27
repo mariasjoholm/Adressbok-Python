@@ -1,39 +1,38 @@
 [
   {
     "firstName": "Anna",
-    "firstName": "Anna-Klara",
     "lastName": "Jonsson",
     "telephone": "0701234567",
-    "adress": "Berlin Berlinvägen 12B",
+    "address": " Berlin Berlinvägen 12B",
     "email": "anna.jonsson@example.com",
     "birthday": "1995-04-12",
-    "info": "Vän"
+    "information": "Vän"
   },
   {
     "firstName": "Mary",
     "lastName": "Berrysson",
     "telephone": "0702345678",
-    "adress": "Uppsala Uppsalagatan 15",
-    "email": "mary.Berry@example.com",
+    "address": "Uppsala Uppsalagatan 15",
+    "email": "maria.sjoholm@example.com",
     "birthday": "1992-08-03",
-    "info": "Jobbkontakt"
+    "information": "Jobbkontakt"
   },
   {
     "firstName": "Mary",
     "lastName": "Jönsson",
     "telephone": "0703456789",
-    "adress": "Västerås Västeråsgatan 18",
-    "email": "mary.jonsson@example.com",
+    "address": "Västerås Västeråsgatan 18",
+    "email": "maria.vestman@example.com",
     "birthday": "1998-01-20",
-    "info": "Studiekamrat"
+    "information": "Studiekamrat"
   },
   {
-    "firstName": "Oscar",
-    "lastName": "Haikola",
+    "firstName": "Oskar",
+    "lastName": "Haikolasson",
     "telephone": "0704567890",
-    "adress": "Ludvika Ludvikavägen 1",
+    "address": "Ludvika Ludvikavägen 1",
     "email": "oscar.haikola@example.com",
     "birthday": "1990-11-09",
-    "info": "Familj"
+    "information": "Familj"
   }
 ]
