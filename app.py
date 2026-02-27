@@ -1,7 +1,6 @@
 
-#Bättre namn för filer och flera filer kanske 
-#dubbelkolla engelelska och kommentarer 
 """
+För att använda programmet: 
 1) Installera streamlit i mappen, om detta är redan gjort skippa till steg 2 
 
 2)Aktivera virtuell miljö
@@ -27,7 +26,7 @@ def style(path):
     with open(path) as file:
         st.markdown(f"<style>{file.read()}</style>", unsafe_allow_html=True)  
 style("style.css")
-# --------------Session state------------------
+
 # Skapas bara första gången appen körs
 if "contacts" not in st.session_state:
     
