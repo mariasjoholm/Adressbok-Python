@@ -12,8 +12,8 @@ test_contacts = [
         "info": "Vän"
     },
     {
-        "firstName": "Maria",
-        "lastName": "Sjöholm",
+        "firstName": "Mary",
+        "lastName": "Berrysson",
         "telephone": "0702345678",
         "adress": "Uppsala Uppsalagatan 15",
         "email": "maria.sjoholm@example.com",
@@ -21,8 +21,8 @@ test_contacts = [
         "info": "Jobbkontakt"
     },
     {
-        "firstName": "Maria",
-        "lastName": "Vestman",
+        "firstName": "Mary",
+        "lastName": "Jönsson",
         "telephone": "0703456789",
         "adress": "Västerås Västeråsgatan 18",
         "email": "maria.vestman@example.com",

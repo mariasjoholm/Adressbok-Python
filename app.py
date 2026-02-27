@@ -1,4 +1,3 @@
-
 """
 För att använda programmet: 
 1) Installera streamlit i mappen, om detta är redan gjort skippa till steg 2 
