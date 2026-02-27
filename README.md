@@ -32,19 +32,16 @@ Denna struktur gör att sökningen både är flexibel och tillförlitlig.
 
 Projektet består av följande delar.
 
-### Filer i rotmappen
+### Filer 
 
-`app.py` innehåller huvudapplikationen och användargränssnittet.  
-`storage_json.py` ansvarar för att läsa och skriva JSON samt konvertera datum.  
-`validation.py` innehåller logik för inmatningskontroll.  
-`test_contacts.py` innehåller initial testdata.  
-`style.css` innehåller anpassad styling.  
-`contacts.json` skapas automatiskt och lagrar sparade kontakter.
+**app.py** innehåller huvudapplikationen och användargränssnittet.  
+**storage_json.py** ansvarar för att läsa och skriva JSON samt konvertera datum.  
+**validation.py** innehåller logik för inmatningskontroll.  
+**style.css innehåller** anpassad styling.  
 
-### Mappar
-
-`util` innehåller `util_fuzz.py` som ansvarar för fuzzy sökning.  
-`Images` innehåller applikationens headerbild.
+**contacts.json** skapas automatiskt och lagrar sparade kontakter samt innehåller test data i **test_contacts.py**. 
+**util** innehåller **util_fuzz.py** som ansvarar för fuzzy sökning.  
+**Images** innehåller applikationens headerbild.
 
 ### Återställning av testkontakter
 
