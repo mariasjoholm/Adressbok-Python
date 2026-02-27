@@ -7,7 +7,7 @@ Detta är en kontaktapplikation utvecklad i Python med Streamlit. Applikationen 
 
 Projektet visar hur man kan strukturera en mindre Python applikation med tydlig uppdelning mellan användargränssnitt, validering, lagring och sökfunktion.
 
-Användargränssnittet är byggt med Streamlit. Kontaktdata lagras lokalt i en JSON fil. Födelsedatum hanteras genom att konverteras mellan datatypen `datetime.date` och ISO format när data sparas och laddas.
+Användargränssnittet är byggt med Streamlit. Kontaktdata lagras lokalt i en JSON fil. Födelsedatum hanteras genom att konverteras mellan datatypen datetime.date och ISO format när data sparas och laddas.
 
 ## Funktioner
 
